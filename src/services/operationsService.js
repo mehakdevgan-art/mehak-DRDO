@@ -1,0 +1,2 @@
+import { request } from './apiClient';
+export const getDepartments=()=>request('/departments'); export const getMilestones=()=>request('/milestones'); export const getTasks=(params={})=>request(`/tasks?${new URLSearchParams({page:1,page_size:100,...params})}`); export const getBudgets=()=>request('/budget'); export const getRisks=()=>request('/risks'); export const getReport=()=>request('/reports/portfolio');
