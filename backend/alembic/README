@@ -1,0 +1,2 @@
+Create a revision with: alembic revision --autogenerate -m "initial schema"
+Apply it with: alembic upgrade head

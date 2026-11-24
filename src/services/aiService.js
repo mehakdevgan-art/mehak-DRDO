@@ -1,0 +1,2 @@
+import { request } from './apiClient'; const path=(name,id)=>`/ai/${name}?project_id=${id}`;
+export const getHealth=(id)=>request(path('project-health',id)); export const getRecommendations=(id)=>request(path('recommendations',id)); export const getPredictions=(id)=>request(path('predictions',id)); export const getRiskAnalysis=(id)=>request(path('risk-analysis',id)); export const getBudgetAnalysis=(id)=>request(path('budget-analysis',id)); export const getSummary=(id)=>request(path('project-summary',id));

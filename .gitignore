@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.venv/
+backend/venv/
+backend/defence_pms.db
+backend/__pycache__/
+backend/**/*.py[cod]

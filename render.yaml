@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: dpm-dss
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: dpm-dss-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ADMIN_EMAIL
+        value: admin@drdo.local
+      - key: ADMIN_PASSWORD
+        generateValue: true
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "60"
+
+databases:
+  - name: dpm-dss-db
+    databaseName: dpm_dss
+    user: dpm_dss
+    plan: free
+    region: oregon
