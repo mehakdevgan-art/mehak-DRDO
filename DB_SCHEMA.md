@@ -13,7 +13,7 @@ Stores all system users and their assigned roles for RBAC.
 - `created_at` (Timestamp)
 
 ## Table: `departments`
-Represents the various divisions within DRDO (e.g., AI Lab, Radar Systems).
+Represents the organization's divisions (e.g., AI Lab, Radar Systems).
 - `id` (UUID, Primary Key)
 - `name` (String)
 - `head_id` (UUID, Foreign Key -> `users.id`)

@@ -56,7 +56,7 @@ export default function ProjectComparison() {
       <PageHeader 
         eyebrow="Portfolio Analytics" 
         title="Project Comparison" 
-        description="Side-by-side comparative analysis of DRDO projects to optimize resource allocation." 
+        description="Side-by-side comparative analysis of projects to optimize resource allocation."
       />
 
       <div className="mt-6 flex flex-col md:flex-row gap-6 mb-8">

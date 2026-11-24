@@ -16,7 +16,7 @@ services:
       - key: SECRET_KEY
         generateValue: true
       - key: ADMIN_EMAIL
-        value: admin@drdo.local
+        value: admin@example.com
       - key: ADMIN_PASSWORD
         generateValue: true
       - key: ACCESS_TOKEN_EXPIRE_MINUTES

@@ -56,7 +56,7 @@ graph TD
 
 ### 3. Decision Support Engine
 - **Technology**: Python, scikit-learn, Pandas.
-- **Responsibility**: Analyzes schedule and cost variances (SPI/CPI) to predict project delays and budget overruns. Generates actionable recommendations based on historical DRDO project data.
+- **Responsibility**: Analyzes schedule and cost variances (SPI/CPI) to predict project delays and budget overruns. Generates actionable recommendations based on historical project data.
 
 ### 4. PostgreSQL Database
 - **Technology**: PostgreSQL 15.

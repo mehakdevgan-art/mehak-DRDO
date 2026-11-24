@@ -1,12 +1,12 @@
-# AI-Powered Defence Project Monitoring & Decision Support System (DPM-DSS)
+# AI-Powered Project Monitoring & Decision Support System (PM-DSS)
 
-*"Intelligent Monitoring and Decision Support for Strategic Defence Projects"*
+*"Intelligent Monitoring and Decision Support for Strategic Projects"*
 
 ## Overview
 
-The DPM-DSS is a comprehensive, enterprise-grade web application designed for the Defence Research and Development Organisation (DRDO). It provides senior management, project directors, and scientists with real-time visibility into the health, schedule, budget, and risks of strategic defence projects.
+The PM-DSS is a comprehensive web application for monitoring complex research and infrastructure portfolios. It provides managers and project teams with visibility into project health, schedules, budgets, and risks.
 
-At its core, DPM-DSS leverages predictive analytics and an AI Decision Support Engine to automatically surface insights, detect potential delays, forecast budget overruns, and recommend strategic resource reallocations.
+At its core, PM-DSS uses predictive analytics and a decision-support engine to surface insights, detect potential delays, forecast budget overruns, and recommend resource reallocations.
 
 ## Key Features
 
@@ -50,7 +50,7 @@ The system supports a hierarchical, role-based access control (RBAC) architectur
    npm install
    npm run dev
    ```
-3. Open the Vite URL (normally `http://localhost:5174` in this workspace) and sign in with `admin@drdo.local` / `Admin@123`.
+3. Open the Vite URL (normally `http://localhost:5174` in this workspace) and sign in with `admin@example.com` / `Admin@123`.
 
 The frontend reads `VITE_API_URL` from `.env`; copy `.env.example` to `.env` if the API is not running at `http://127.0.0.1:8000`.
 
@@ -61,7 +61,7 @@ Swagger API documentation is available at `http://127.0.0.1:8000/docs`.
 The repository includes a Dockerfile and `render.yaml` Blueprint for a single
 Render web service backed by PostgreSQL. The Blueprint generates production
 `SECRET_KEY` and `ADMIN_PASSWORD` values; the initial admin email is
-`admin@drdo.local`. Retrieve the generated password from the service's
+`admin@example.com`. Retrieve the generated password from the service's
 environment settings after the first deploy. The login page does not display
 demo credentials.
 

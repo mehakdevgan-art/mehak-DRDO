@@ -42,7 +42,7 @@ export default function Dashboard() {
     <>
       <PageHeader 
         eyebrow="Strategic project command center" 
-        title="DRDO Executive Dashboard" 
+        title="Executive Project Dashboard"
         description="Live monitoring of strategic programmes, budget, risks, and predictive AI insights." 
       />
       

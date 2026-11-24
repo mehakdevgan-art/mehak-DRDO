@@ -45,7 +45,7 @@ export default function SmartAlertCenter() {
       <PageHeader 
         eyebrow="Monitoring operations" 
         title="Smart Alert Center" 
-        description="Automated system alerts, warnings, and notifications across all DRDO projects." 
+        description="Automated system alerts, warnings, and notifications across all monitored projects."
       />
 
       <div className="mt-6 flex flex-col md:flex-row gap-4 mb-6">

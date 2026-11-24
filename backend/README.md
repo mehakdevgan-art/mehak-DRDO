@@ -1,4 +1,4 @@
-# AI Defence Project Monitoring API
+# AI Project Monitoring API
 
 Async FastAPI backend for the project-monitoring dashboard. It uses SQLAlchemy 2, JWT RBAC, Pydantic validation, deterministic seed data, rule-based AI recommendations, and a prediction-service boundary that can later be replaced with ML/RAG.
 
@@ -15,7 +15,7 @@ uvicorn app.main:app --reload
 
 Open `http://127.0.0.1:8000/docs` for Swagger. The default local configuration uses SQLite; set `DATABASE_URL` in `.env` to the PostgreSQL connection shown in `.env.example` for deployment.
 
-Seeded admin credentials: `admin@drdo.local` / `Admin@123` (change immediately outside demo use). Obtain a token via `POST /auth/login`, then authorize in Swagger.
+Seeded admin credentials: `admin@example.com` / `Admin@123` (change immediately outside demo use). Obtain a token via `POST /auth/login`, then authorize in Swagger.
 
 Core endpoints: `/dashboard`, `/projects`, `/projects/{id}`, `/departments`, `/tasks`, `/milestones`, `/budget`, `/risks`, and `/reports/portfolio`.
 

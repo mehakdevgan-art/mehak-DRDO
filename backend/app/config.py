@@ -3,11 +3,11 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     """Runtime configuration supplied through environment variables."""
-    app_name: str = "AI Defence Project Monitoring API"
+    app_name: str = "AI Project Monitoring API"
     environment: str = "development"
     database_url: str = "sqlite+aiosqlite:///./defence_pms.db"
     secret_key: str = "development-only-change-me"
-    admin_email: str = "admin@drdo.local"
+    admin_email: str = "admin@example.com"
     admin_password: str = "Admin@123"
     access_token_expire_minutes: int = 480
     cors_origins: str = "http://localhost:5173,http://127.0.0.1:5173,http://localhost:5174,http://127.0.0.1:5174"

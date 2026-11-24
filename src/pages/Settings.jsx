@@ -4,7 +4,7 @@ import { Settings as SettingsIcon, Building, ShieldAlert, Bell, Save } from 'luc
 
 export default function Settings() {
   const [formData, setFormData] = useState({
-    orgName: 'DRDO',
+    orgName: 'Organization',
     financialYear: '2026-2027',
     riskThreshold: '75',
     budgetThreshold: '90',

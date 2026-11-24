@@ -9,8 +9,14 @@ async def seed_database(db:AsyncSession)->None:
     settings = get_settings()
     admin = await db.scalar(select(User).where(User.email == settings.admin_email))
     if not admin:
+        # Keep the existing administrator and password when the configured
+        # email changes between deployments.
+        admin = await db.scalar(select(User).where(User.role == Role.ADMIN).order_by(User.id).limit(1))
+        if admin:
+            admin.email = settings.admin_email
+    if not admin:
         db.add(User(email=settings.admin_email,full_name="System Administrator",password_hash=hash_password(settings.admin_password),role=Role.ADMIN))
-        await db.flush()
+    await db.commit()
     if await db.scalar(select(func.count()).select_from(Project)): return
     departments=["Advanced Research","Communication Systems","Radar Systems","Cyber Security","Testing & Validation","Field Deployment","Electronics","Aerospace Research","Data Engineering","Procurement","Systems Integration","Quality Assurance"]
     for i,name in enumerate(departments): db.add(Department(department_name=name,department_head=f"Dr. {['Mehta','Rao','Singh','Iyer'][i%4]}",total_members=8+i%9))
